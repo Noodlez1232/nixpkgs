@@ -68,12 +68,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     )
   '';
 
-  passthru.updateScript = nix-update-script {
-    extraArgs = [
-      "--subpackage"
-      "fedistar-frontend"
-    ];
-  };
+  passthru.updateScript = nix-update-script {};
 
   meta = {
     description = "Multi-column Fediverse client application for desktop";
